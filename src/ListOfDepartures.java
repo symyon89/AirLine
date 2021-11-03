@@ -19,8 +19,8 @@ public class ListOfDepartures {
             nameFlight = scanner.nextLine();
             System.out.print("Enter loading interval :");
             loadingInterval = scannerNumber.nextByte();
-            System.out.print("Enter predicted departure date in format \"yyyy-MM-dd HH:mm\" :");
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+            System.out.print("Enter predicted departure date in format \"dd-MM-yyyy HH:mm\" :");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
             LocalDateTime dateTime = LocalDateTime.parse(scanner.nextLine(), formatter);
             listDepartures.add(new Departures(nameFlight,loadingInterval,dateTime));
             System.out.print("Do you want to enter another departure ? (y/n) : ");
