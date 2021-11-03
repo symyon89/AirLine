@@ -27,5 +27,8 @@ public class ListOfDepartures {
             anotherDeparture = scanner.nextLine().charAt(0);
         }while (anotherDeparture == 'y' || anotherDeparture == 'Y' );
     }
+    public void showDeparture(){
+        listDepartures.forEach(System.out::println);
+    }
 
 }

@@ -11,4 +11,12 @@ public class Departures {
                 this.date = date;
         }
 
+        @Override
+        public String toString() {
+                return "Departure{" +
+                        "flightCode='" + flightCode + '\'' +
+                        ", loadingInterval=" + loadingInterval +
+                        ", date=" + date +
+                        '}';
+        }
 }
