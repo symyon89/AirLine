@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -18,9 +19,9 @@ public class ListOfDepartures {
             nameFlight = scanner.nextLine();
             System.out.print("Enter loading interval :");
             loadingInterval = scannerNumber.nextByte();
-            System.out.print("Enter predicted departure date :");
-            date = scanner.nextLine();
-            LocalDateTime dateTime = LocalDateTime.parse(date);
+            System.out.print("Enter predicted departure date in format \"yyyy-MM-dd HH:mm\" :");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+            LocalDateTime dateTime = LocalDateTime.parse(scanner.nextLine(), formatter);
             listDepartures.add(new Departures(nameFlight,loadingInterval,dateTime));
             System.out.print("Do you want to enter another departure ? (y/n) : ");
             anotherDeparture = scanner.nextLine().charAt(0);
